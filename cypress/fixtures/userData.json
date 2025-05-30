@@ -1,0 +1,23 @@
+{
+    "userSuccess":{
+        "userName" : "standard_user",
+        "password" : "secret_sauce"
+    },
+
+    
+
+    "descriptionProduct":{
+        "itemName": "Sauce Labs Bike Light",
+        "itemPrice": "$9.99",
+        "itemDescription": "A red light isn't the desired state in testing but it sure helps when riding your bike at night."
+    },
+
+
+
+        "checkoutData": {
+            "firstName": "Rheveni",
+            "lastName": "Rodrigues",
+            "postalCode": "12345678"
+        }
+    
+}
