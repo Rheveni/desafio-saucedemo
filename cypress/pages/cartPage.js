@@ -1,3 +1,5 @@
+// Page Object para interações na tela de carrinho
+
 class CartPage{
     selectorsList() {
         const selectors = {
@@ -12,15 +14,18 @@ class CartPage{
         return selectors
     }
 
+// Abre a página do carrinho
     openCartButton() {
         cy.get(this.selectorsList().cartButton).click()
     }
 
+// Valida se o item adicionado ao carrinho está correto
     verifyCartItem(itemName, itemPrice) {
         cy.get(this.selectorsList().cartItemName).should('contain', itemName)
         cy.get(this.selectorsList().cartItemPrice).should('contain', itemPrice)
     }
 
+// Clica no botão de checkout
     clickCheckoutButton() {
         cy.get(this.selectorsList().checkoutButton).click()
         cy.get('body').should('contain', 'Checkout: Your Information')
