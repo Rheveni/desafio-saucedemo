@@ -1,3 +1,5 @@
+// Page Object para interações na tela de produtos
+
 class ProductPage{
 
     selectorsList(){
@@ -12,6 +14,8 @@ class ProductPage{
         return selectors
     }
 
+
+// Seleciona um produto e valida seus dados
     selectProduct(itemName, itemPrice, itemDescription) {
         cy.get(this.selectorsList().productName).contains(itemName)
         cy.get(this.selectorsList().productName).contains(itemName).click()
@@ -22,6 +26,7 @@ class ProductPage{
         
     }
 
+// Clica no botão para adicionar produto ao carrinho
     clickAddToCartButton() {
        cy.get(this.selectorsList().addToCartButton).click()
     }
